@@ -1,0 +1,33 @@
+root { 
+    display: block;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+br {
+    clear: both;
+}
+
+span {
+    display: block;
+    float: left;
+    width: 400px;
+    padding: 2px;
+    margin: 1px;
+    font-size: 14px;
+}
+
+.failure {
+    color: darkred;
+    background-color: lightcoral;
+    border: solid 1px darkred;
+}
+
+.info {
+    color: darkblue;
+    background-color: lightblue;
+    border: solid 1px darkblue;
+}
+
