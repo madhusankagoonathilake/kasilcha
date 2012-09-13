@@ -19,14 +19,17 @@ var Kasilcha = {
             total++;
         }
         
+        var percentage = Math.floor((success / total) * 100);
+        
         $('#console').prepend('<span class="info">' + total + ' Tests, ' + success + ' Passed, ' + failure +' Failed.</span><br />');
+        
     },
-    equals: function(expected, actual, message) {
+    assertEquals: function(expected, actual, message) {
         var assertion = {
             run: function() {
                 if (expected !== actual) {
                     if (message === undefined) {
-                        message = 'Failed asserting ' + expected + ' equals ' + actual;
+                        message = 'Failed asserting ' + actual + ' equals the expected value ' + expected;
                     }
                     $('#console').append('<span class="failure">' + message + '</span><br />');
                     return false;
@@ -36,6 +39,6 @@ var Kasilcha = {
             }
         }
         
-        return assertion;
+        this.add(assertion);
     }
 };
