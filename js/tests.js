@@ -10,6 +10,13 @@ $(document).ready(function() {
         assertArrayHasKey('b', { a: 1, b: 2, c: 3});
         assertArrayHasKey(10, ['a', 'b', 'c'], 'This test is also meant to be failed');
         assertArrayHasKey('p', { a: 1, b: 2, c: 3});
+        
+        assertEmpty(null);
+        assertEmpty('');
+        assertEmpty(' ', 'Space should not be intepreted as empty');
+        assertEmpty(0, 'Zero should not be intepreted as empty');
+        assertEmpty(1);
+        
         run();
     }
 });
