@@ -104,6 +104,25 @@ var Kasilcha = {
         
         this.add(assertion);
     },
+    
+    assertEmpty: function(value, description) {
+        var assertion = {
+            run: function(context) {
+                if (value !== null && value !== '') {
+                    context.log('Failed to assert that ' + value + ' is empty', 'failure', description);
+                    return false;
+                }
+                
+                if (context.is('show-success-mode')) {
+                    context.log('Asserted that ' + value + ' is empty', 'success');
+                }
+                
+                return true;
+            }
+        };
+        
+        this.add(assertion);
+    },
 
     assertEquals: function(expected, actual, description) {
         var assertion = {
