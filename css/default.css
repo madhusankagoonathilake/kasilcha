@@ -13,10 +13,16 @@ br {
 span {
     display: block;
     float: left;
-    width: 400px;
+    width: 500px;
     padding: 2px;
     margin: 1px;
     font-size: 14px;
+}
+
+.success {
+    color: darkgreen;
+    background-color: yellowgreen;
+    border: solid 1px darkgreen;
 }
 
 .failure {
@@ -29,5 +35,23 @@ span {
     color: darkblue;
     background-color: lightblue;
     border: solid 1px darkblue;
+}
+
+.warning {
+    color: brown;
+    background-color: wheat;
+    border: solid 1px brown;
+}
+
+.description {
+    font-size: 11px;
+    padding-left: 16px;
+    width: 96%
+}
+
+.contains-description {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-position: 99% 7px;
 }
 
