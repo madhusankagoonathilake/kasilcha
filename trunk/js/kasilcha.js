@@ -141,5 +141,44 @@ var Kasilcha = {
         }
         
         this.add(assertion);
+    },
+
+    assertTrue: function(value, description) {
+        var assertion = {
+            run: function(context) {
+                if (value === true) {
+                    if (context.is('show-success-mode')) {
+                        context.log('Asserted that ' + value + ' is true', 'success');
+                    }
+                    
+                    return true;
+                }
+                
+                
+                context.log('Failed asserting ' + value + ' is true', 'failure', description);
+                return false;
+            }
+        }
+        
+        this.add(assertion);
+    },
+
+    assertFalse: function(value, description) {
+        var assertion = {
+            run: function(context) {
+                if (value === false) {
+                    if (context.is('show-success-mode')) {
+                        context.log('Asserted that ' + value + ' is false', 'success');
+                    }
+                    
+                    return true;
+                }
+                
+                context.log('Failed asserting ' + value + ' is false', 'failure', description);
+                return false;
+            }
+        }
+        
+        this.add(assertion);
     }
 };
