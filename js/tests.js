@@ -16,7 +16,25 @@ $(document).ready(function() {
         assertEmpty(' ', 'Space should not be intepreted as empty');
         assertEmpty(0, 'Zero should not be intepreted as empty');
         assertEmpty(1);
-        
+
+        assertTrue(true);
+        assertTrue(false);
+        assertTrue(1, '1 should not be intepreted as true');
+        assertTrue('', 'An empty string should not be intepreted as true.');
+        assertTrue('abc', 'A non-empty string should not be intepreted as true.');
+        assertTrue(25, 'A positive integer should not be intepreted as true.');
+        assertTrue(0, 'Zero should not be intepreted as true.');
+        assertTrue(-30, 'A negative integer should not be intepreted as true.');
+
+        assertFalse(false);
+        assertFalse(true);
+        assertFalse(1, '1 should not be intepreted as false');
+        assertFalse('', 'An empty string should not be intepreted as false');
+        assertFalse('abc', 'A non-empty string should not be intepreted as false');
+        assertFalse(25, 'A positive integer should not be intepreted as false');
+        assertFalse(0, 'Zero should not be intepreted as false');
+        assertFalse(-30, 'A negative integer should not be intepreted as false');
+
         run();
     }
 });
