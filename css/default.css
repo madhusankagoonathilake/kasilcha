@@ -14,33 +14,27 @@ span {
     display: block;
     float: left;
     width: 500px;
-    padding: 2px;
-    margin: 1px;
+    padding: 8px 8px 8px 16px;
+    margin: 2px;
     font-size: 14px;
+    border-radius: 8px;
 }
 
 .success {
-    color: darkgreen;
-    background-color: yellowgreen;
-    border: solid 1px darkgreen;
+    background-color: rgb(90, 223, 28);
 }
 
 .failure {
-    color: darkred;
-    background-color: lightcoral;
-    border: solid 1px darkred;
+    background-color: rgb(236, 0, 47);
 }
 
 .info {
-    color: darkblue;
     background-color: lightblue;
-    border: solid 1px darkblue;
 }
 
 .warning {
-    color: brown;
-    background-color: wheat;
-    border: solid 1px brown;
+    color: black;
+    background-color: gold;
 }
 
 .description {
@@ -50,8 +44,7 @@ span {
 }
 
 .contains-description {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');
-    background-repeat: no-repeat;
-    background-position: 99% 7px;
+    width: 490px;
+    border-right: solid 10px rgb(186, 0, 47);
 }
 
