@@ -35,6 +35,12 @@ $(document).ready(function() {
         assertFalse(0, 'Zero should not be intepreted as false');
         assertFalse(-30, 'A negative integer should not be intepreted as false');
 
+        assertGreaterThan(30, 40);
+        assertGreaterThan(40, 30, '40 should not be intepreted as greater than 30');
+        assertGreaterThan(30, 30, '30 should not be intepreted as greater than 30');
+        assertGreaterThan(30, 30.1);
+        assertGreaterThan(30, 30.00000000000001);
+
         run();
     }
 });
